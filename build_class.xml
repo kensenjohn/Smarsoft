@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="classFiles" default="main">
+	<property name="webapp" value="${basedir}"/>
+	<property file="${webapp}/smarasoftbuild.properties" prefix="build_props"/>
+	<property name="classfolder" value="${build_props.CLASS_FOLDER}" />
+	<property name="binfolder" value="${build_props.BIN_FOLDER}" />
+	<property name="destfolder" value="${build_props.DEST_PROJECT}" />
+	
+	<target name="main">
+		<copy todir="${destfolder}/${classfolder}/">
+			<fileset dir="${basedir}/out/production/Guests/"/>
+		</copy>
+	</target>
+</project>
